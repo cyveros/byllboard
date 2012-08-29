@@ -22,48 +22,48 @@
 
 		var methods = {
 			get_min_top: function(){
-                var val = configs.pos['0']['top'];
-                var ref = "0";
+                	var val = configs.pos['0']['top'];
+                	var ref = "0";
                
-                $.each(configs.pos, function(key, value){
-                        if (value['top'] < val){
-                                val = value['top'];
-                                ref = key;
-                        }
-                });
+               		 $.each(configs.pos, function(key, value){
+                        	if (value['top'] < val){
+                                	val = value['top'];
+                                	ref = key;
+                        	}
+                	});
                
-                return ref;
-			},
-			get_max_top: function(){
-                var val = configs.pos['0']['top'];
-                var ref = "0";
+                	return ref;
+		},
+		get_max_top: function(){
+                	var val = configs.pos['0']['top'];
+                	var ref = "0";
                
-                $.each(configs.pos, function(key, value){
-                        if (value['top'] > val){
-                                val = value['top'];
-                                ref = key;
-                        }                      
-                });
+               		 $.each(configs.pos, function(key, value){
+                        	if (value['top'] > val){
+                                	val = value['top'];
+                                	ref = key;
+                        	}                      
+               		 });
 				
-                return ref;              
-			},
-			get_min_left: function(){
-                var val = configs.pos['0']['left'];
-                var ref = "0";
+                	return ref;              
+		},
+		get_min_left: function(){
+                	var val = configs.pos['0']['left'];
+                	var ref = "0";
                
-                $.each(configs.pos, function(key, value){
-                        if (value['left'] < val){
-                                val = value['left'];
-                                ref = key;
-                        }
-                });
+               		 $.each(configs.pos, function(key, value){
+                        	if (value['left'] < val){
+                                	val = value['left'];
+                                	ref = key;
+                        	}
+                	});
                
-                return ref;               
-			}
-		}; 
+                	return ref;               
+		}
+	}; 
 		
-		return this.each(function(index){
-			var height =  $(this).height() + 'px';
+	return this.each(function(index){
+		var height =  $(this).height() + 'px';
                 $(this).css('height', height);
                
                 var ref = methods.get_min_top();
